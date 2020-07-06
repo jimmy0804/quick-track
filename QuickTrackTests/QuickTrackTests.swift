@@ -2,7 +2,7 @@
 //  QuickTrackTests.swift
 //  QuickTrackTests
 //
-//  Created by Yeung, Jimmy(AWF) on 6/7/2020.
+//  Created by Jimmy, Yeung on 6/7/2020.
 //
 
 import XCTest
