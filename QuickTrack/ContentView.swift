@@ -8,8 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selection = 1
+    
     var body: some View {
-        Text("Hello, world!").padding()
+        TabView(selection: $selection) {
+            Text("Tab Content 1").tabItem {
+                makeTabItem(title: "Today", icon: "")
+            }.tag(1)
+
+//            Text("Tab Content 2").tabItem {
+//                makeTabItem(title: "Drawer", icon: "")
+//            }.tag(2)
+            
+            Text("Tab Content 2").tabItem {
+                makeTabItem(title: "Settings", icon: "")
+            }.tag(2)
+        }
+    }
+    
+    private func makeTabItem(title: String, icon: String) -> some View {
+        VStack {
+            Image(systemName: icon)
+            Text(title)
+        }
     }
 }
 
